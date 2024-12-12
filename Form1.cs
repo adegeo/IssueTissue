@@ -190,7 +190,7 @@ namespace IssueTissue
                 .Replace("{author}", $"{mentionAuthor}{metaFieldAuthor}");
 
             StringBuilder metadataStringBuilder = new();
-            metadataStringBuilder.AppendLine($"* {metadata["document_id"]}");
+            metadataStringBuilder.AppendLine($"* ID: {metadata["document_id"]}");
             if (metadata.ContainsKey("ms.service"))
                 metadataStringBuilder.AppendLine($"* Service: **{metadata["ms.service"]}**");
             if (metadata.ContainsKey("ms.subservice"))
