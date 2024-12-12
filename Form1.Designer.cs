@@ -36,6 +36,7 @@
             btnCopy = new Button();
             txtOutput = new TextBox();
             label2 = new Label();
+            chkMentionUser = new CheckBox();
             ((System.ComponentModel.ISupportInitialize)splitContainer1).BeginInit();
             splitContainer1.Panel1.SuspendLayout();
             splitContainer1.Panel2.SuspendLayout();
@@ -76,6 +77,7 @@
             // 
             // splitContainer1.Panel2
             // 
+            splitContainer1.Panel2.Controls.Add(chkMentionUser);
             splitContainer1.Panel2.Controls.Add(btnCopy);
             splitContainer1.Panel2.Controls.Add(txtOutput);
             splitContainer1.Panel2.Controls.Add(label2);
@@ -134,6 +136,18 @@
             label2.TabIndex = 0;
             label2.Text = "Output";
             // 
+            // chkMentionUser
+            // 
+            chkMentionUser.AutoSize = true;
+            chkMentionUser.Checked = true;
+            chkMentionUser.CheckState = CheckState.Checked;
+            chkMentionUser.Location = new Point(0, 193);
+            chkMentionUser.Name = "chkMentionUser";
+            chkMentionUser.Size = new Size(125, 19);
+            chkMentionUser.TabIndex = 4;
+            chkMentionUser.Text = "@ Mention Author";
+            chkMentionUser.UseVisualStyleBackColor = true;
+            // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
@@ -165,5 +179,6 @@
         private Button btnCopy;
         private TextBox txtOutput;
         private Label label2;
+        private CheckBox chkMentionUser;
     }
 }

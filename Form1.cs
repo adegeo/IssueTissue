@@ -179,12 +179,14 @@ namespace IssueTissue
                 return;
             }
 
+            string mentionAuthor = chkMentionUser.Checked ? "@" : string.Empty;
+
             // Fill out the template
             string output = template
                 .Replace("{pageurl}", metaFieldUrl)
                 .Replace("{contentsource}", metaFieldContentSource)
                 .Replace("{versionid}", metaFieldVersion)
-                .Replace("{author}", metaFieldAuthor);
+                .Replace("{author}", $"{mentionAuthor}{metaFieldAuthor}");
 
             StringBuilder metadataStringBuilder = new();
             metadataStringBuilder.AppendLine($"* {metadata["document_id"]}");
