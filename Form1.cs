@@ -56,6 +56,7 @@ namespace IssueTissue
         {
             btnCopy.Focus();
             btnClean.Enabled = false;
+            txtOutput.Clear();
 
             // Parse URL to get issue info
             Match match = Regex.Match(txtUrl.Text.ToLower().Trim().Replace("\\", "/"), @".*\/(.*)\/(.*)\/issues\/(.*)");
